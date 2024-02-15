@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="ToDoCSS.css" />
+
+<head>
+    <title>Brian Gillis' Website</title>
+</head>
+
+<script src="confetti.js"></script>
+
+
+<body id="container" style="background-image: url('Background.jpeg'); background-size: cover;">
+    <h1>THE To-Do List</h1>
+    <h2 title="what it do babyyyy">Be Better Than Yesterday</h2>
+    <hr>
+    <button onClick="window.location.reload();">Refresh</button>
+
+    <div class="dropdown">
+        <button class="dropbtn">Email</button>
+        <div class="dropdown-content">
+            <a href="https://outlook.office.com/mail/">Outlook</a>
+            <a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Senior Design</button>
+        <div class="dropdown-content">
+            <a href="https://roverwheelme463.atlassian.net/jira/software/projects/ATO/boards/1">Jira</a>
+            <a href="https://purdue0-my.sharepoint.com/:f:/r/personal/jbittero_purdue_edu/Documents/Spring%202024/Senior%20Design%20Project?csf=1&web=1&e=2hFCTG">Sharepoint</a>
+            <a href="https://calendar.lib.purdue.edu/">Room Reservation</a>
+            <a href="https://slic.ecn.purdue.edu/Public/RemoteAvailability">Remote Availability</a>
+            <a href="https://purdue.brightspace.com/d2l/le/content/955633/Home">Brightspace</a>
+        </div>
+    </div>
+    
+    <div class="dropdown">
+        <button class="dropbtn">CFD</button>
+        <div class="dropdown-content">
+            <a href="https://www.gradescope.com/courses/702193">Gradescope</a>
+            <a href="https://www.overleaf.com/project">Overleaf</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Bucket List</button>
+        <div class="dropdown-content">
+            <a href="https://docs.google.com/spreadsheets/d/1-PolccQd8HbWGFfN3bjGOT4dRry-Oo6Pt9RlYPPlyrY/edit#gid=0">Sheet</a>
+        </div>
+    </div>
+    
+    <div class="dropdown">
+        <button class="dropbtn">Take a Break</button>
+        <div class="dropdown-content">
+            <a href="https://www.youtube.com/playlist?list=WL">YouTube Watch Later</a>
+            <a href="https://www.xfinity.com/stream/">TV</a>
+            <a href="https://play.hbomax.com/page/urn:hbo:page:home">HBO</a>
+        </div>
+    </div>
+
+    <button id="showCalendar" onclick="calendar()">Show Calendar</button>
+
+    <button onclick="window.location.href='file:///Users/briangillis/Documents/To-Do-List/BIGIdeas.html'">BIG Ideas
+        Board</button>
+    <button onclick="window.location.href='file:///Users/briangillis/Documents/To-Do-List/theFuckUp.html'">Uh
+        oh</button> 
+    <!-- <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23E4C441&ctz=America%2FIndiana%2FIndianapolis&mode=WEEK&showPrint=0&src=Z2lsbGlzYnJpYW5kQGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679" style="border:solid 1px #777" width="1000" height="600" frameborder="0" scrolling="no"></iframe> -->
+
+    <div id="features" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <div id="myDIV" class="header" style="background-color:#CEB888">
+            <h3> My To Do List </h3>
+            <input type="text" id="myInput" placeholder="Title...131{Subject}" class="title">
+            <input type="text" id="date" placeholder="Date MM,DD" class="date">
+            <span onclick="typeDate()" class="addDateBtn" id="addDateBtn">Due Date...</span>
+            <span onClick="addTask()" class="addItemBtn" id="addItemBtn">Add</span>
+            <span onClick="addSubject()" class="addSubBtn" id="AddSubBtn">Add Subject</span>
+        </div>
+
+        <div id="options" class="options">
+            <h3> What'll it be today sir? </h3>
+            <button onclick="activity()">Activities</button>
+            <button onclick="quote()">Inspirational Quote</button>
+            <button onclick="activity()">Picture</button>
+            <button onclick="nameFeeder()">Phone a Friend</button>
+            <button onclick="studySpot()">Study Spot</button>
+
+        </div>
+    </div>
+
+    <ul id="Up Next">
+        <li class="subject">Up Next</li>
+        <li class="task">Learn react</li>
+    </ul>
+
+    <div id="txtBackground">
+        <div id="boxBack">
+            <div id="txt"></div>
+            <button id ="close" onclick="dbox()">Sounds Good</button>
+            <button id="retry" onclick="reshuffle()">Reshuffle</button>
+
+        </div>
+    </div>
+    
+</body>
+<script src="ToDoJS.js"></script>
+
